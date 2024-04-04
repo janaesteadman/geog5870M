@@ -1,0 +1,64 @@
+<head>
+    <title>Sandy's Tweets</title>
+	
+    <!-- link to the Leaflet stylesheet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" /> 
+	
+    <!-- link to the Leaflet JavaScript library-->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	
+<!-- link to the stylesheet-->
+    <link rel="stylesheet" href="htstyle.css" /> 
+	
+<!-- link to the JQuery library-->
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+<!-- link to your JS file-->
+    <script language="javascript" type="text/javascript" src="hurricanetweetsscript.js"></script>
+</head>
+
+<body onload = initialize()>
+
+<div class="title">
+    <img src="hurricaneicon.png" alt="Image 1">
+    <h1>Sandy's Tweets</h1>
+    <div class="box">
+        <p>Hurricane Sandy was a large and destructive Category 3 Atlantic hurricane which ravaged the Caribbean and the coastal Mid-Atlantic region of the United States in late October 2012.</p>
+        <p>Sandy's Tweets lets you explore historical tweets from when the storm struck.</p>
+        <p>See how people reacted, shared information, and offered support during this significant event.</p>
+		<p>Click the icons below to view all tweets or refine your search using the filter!</p>
+    </div>
+</div>
+
+
+     <div class="wrapper">
+        <button onclick='fetchData()'><img src="search.png" alt="Fetch Data"></button>
+        <div class="button-text">Fetch Data</div>
+        <br>
+        <button onclick='clearData()'><img src="bin.png" alt="Clear Data"></button>
+        <div class="button-text">Clear Data</div>
+        <br /><br />
+        <div id='textWrap'></div>
+    </div>
+	
+<!-- Form for filtering tweets -->
+        <form id="tweetFilterForm">
+            <label for="keyword">Keyword:</label>
+            <input type="text" id="keyword" name="keyword" placeholder="Enter keyword">
+            <br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter location">
+            <br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <br>
+            <input type="submit" value="Filter Tweets">
+        </form>
+    </div>
+	
+    <!--The map div which hosts map object -->
+    <div id="mapdiv"></div>
+
+</body>
+
+
