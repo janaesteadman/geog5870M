@@ -1,6 +1,6 @@
 function initialize() {
     var map = L.map('mapdiv');
-    map.setView([53.79804655828452, -1.5427751265932252], 14);
+    map.setView([53.79804655828452, -1.5427751265932252], 2);
         
     //Load tiles from open street map
     L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
