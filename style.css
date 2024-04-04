@@ -1,0 +1,47 @@
+html { 
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+body { 
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: Georgia, serif;
+	text-align: center; /*centre align text*/
+        }
+       
+        img {
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center align the image horizontally */
+    width: 250px; /* Set the width of the image */
+    height: 300px; /* Set the height of the image */
+}
+
+#mapdiv {
+    position: relative;
+    margin: 0 auto;
+    height: 80%;
+    width: 80%;
+    border: thin solid black;
+}
+
+.infowindow {
+    background-color: #81aae0;
+    color: #333333;
+    padding: 10px;
+}
+
+.infowindow h1 {
+	font-family: Georgia, serif;
+    font-size: 18px
+}
+
+.infowindow p {
+    font-size: 14px;
+	font-family: Georgia, serif;
+}
+
