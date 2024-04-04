@@ -1,0 +1,50 @@
+<head>
+    <!--This title appears in the browser tab-->
+    <title>University of Leeds</title>
+    <!--This is a link to the Leaflet stylesheet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/> 
+    <!--This is a link to the Leaflet JavaScript library-->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+</head>
+
+<body>
+        
+<h1> Explore the University of Leeds</h1>
+<p> Click on a marker to learn more!</p>
+
+    <!--The map div which hosts map object -->
+    <div id="objdiv" style = 'height: 100%; width: 100%;'></div>
+	
+    <p> 	This map is centered at The University of Leeds, UK with a zoom level of 18.
+	
+	<script type="text/javascript" >
+        //Create the map object and set the centre point and zoom level 
+        var map = L.map('objdiv');
+ map.setView([53.804740541010446, -1.5545127904862892], 18);
+       
+        //Load tiles from open street map
+        L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution:'Map data ©OpenStreetMap contributors, CC-BY-SA, Imagery ©CloudMade',
+            maxZoom: 18
+        }).addTo(map); //add the basetiles to the map object
+       
+	    var marker = L.marker([53.8043, -1.5548]).addTo(map).bindPopup("<b>School of Geography</b><br>A hub for geographical research and education");
+	
+		var marker = L.marker([53.8048877084528, -1.5536824626864416]).addTo(map).bindPopup("<b>School of Food Science and Nutrition</b><br>A centre for studying food science and nutrition");
+        
+		var marker = L.marker([53.80409256144383, -1.5554419917391387]).addTo(map).bindPopup("<b>Astbury Centre for Structural Molecular Biology</b><br>A leading research facility in molecular biology");
+        
+		var marker = L.marker([53.80570184735472, -1.5557155770494975]).addTo(map).bindPopup("<b>School of Earth and Environment</b><br>An institution focused on environmental studies and research");
+		
+		var marker = L.marker([53.80421288291144, -1.5533795567968112]).addTo(map).bindPopup("<b>The Edge</b><br>A state-of-the-art gym facility");
+        
+		var marker = L.marker([53.80667053464765, -1.5565946311445054]).addTo(map).bindPopup("<b>Leeds University Union</b><br>The vibrant center for student activities and societies at the University of Leeds");
+
+var polygon = L.polygon([
+    [53.80507072598116, -1.5553125373099983],
+    [53.80507547778964, -1.554947756918581],
+    [53.80476185727382, -1.5549558035448625],
+    [53.80477294490784, -1.555355452650165],
+]).addTo(map).bindPopup("<b>The University of Leeds Sustainable Garden</b><br>A green oasis promoting sustainability and biodiversity on campus");
+    </script>
+</body>
